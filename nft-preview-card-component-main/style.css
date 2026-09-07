@@ -1,0 +1,152 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --mainBG: hsl(217, 54%, 11%);
+  --cardBG: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--mainBG);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  position: relative;
+}
+
+
+main.card {
+  background-color: var(--cardBG);
+  width: min(100%, 21.875rem); 
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.25);
+  color: var(--White);
+}
+
+
+div.card__image-container {
+  width: 100%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.card__image {
+  width: 100%;
+  display: block;
+}
+
+
+h1.card__title {
+  font-size: 1.375rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+h1.card__title:hover {
+  color: var(--Cyan);
+}
+
+.card__description {
+  color: var(--Blue);
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+
+div.card__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+div.card__price,
+div.card__time {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem; 
+}
+
+div.card__price {
+  color: var(--Cyan);
+}
+
+div.card__time {
+  color: var(--Blue);
+  font-weight: 400;
+}
+
+
+.card__footer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line); 
+}
+
+.card__avatar {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--White);
+  border-radius: 50%;
+}
+
+.paragrafo {
+  color: var(--Blue);
+  font-size: 0.9375rem;
+  font-weight: 300;
+}
+
+.card__author {
+  color: var(--White);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.card__author:hover {
+  color: var(--Cyan);
+}
+
+
+footer.attribution {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--Blue);
+}
+
+footer.attribution a {
+  color: var(--Cyan);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer.attribution a:hover {
+  text-decoration: underline;
+}
